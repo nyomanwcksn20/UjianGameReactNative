@@ -40,7 +40,10 @@ export default class App extends Component {
 
 
   onBoardPress = (row, col)=>{
-    
+  var player = this.state.player;
+  var array = this.state.gameState.slice()
+  array[row][col] = player
+  this.setState({gameState: array}) 
   }
 
   renderIcon = (row, col) =>{
